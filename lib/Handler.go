@@ -76,7 +76,7 @@ func (self *BaseHandler) Prepare() {
 	self.Data["useremail"] = sess_email
 	self.Data["usercontent"] = sess_content
 
-	self.Data["xsrfdata"] = template.HTML(self.XsrfFormHtml())
+	self.Data["xsrfdata"] = template.HTML(self.XSRFFormHTML())
 	//self.Data["xsrfdata"] = template.HTML(`<input type="hidden" name="_xsrf" value="` + self.XsrfToken() + `"/>`)
 	//self.Data["xsrftoken"] = self.XsrfToken()
 
