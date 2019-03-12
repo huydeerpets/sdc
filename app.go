@@ -205,12 +205,12 @@ func main() {
 	beego.AddFuncMap("markdown", helper.Markdown)
 	beego.AddFuncMap("markdown2text", helper.Markdown2Text)
 
-	beego.SessionOn = true
-	beego.SessionName = "sdc"
+	beego.BConfig.WebConfig.Session.SessionOn = true
+	beego.BConfig.WebConfig.Session.SessionName = "sdc"
 	//beego.SessionProvider = "file"
 	//beego.SessionSavePath = "./session"
-	beego.AutoRender = true
-	beego.CopyRequestBody = true //必须开启,不然core api部分会无法正常工作
+	beego.BConfig.WebConfig.AutoRender = true
+	beego.BConfig.CopyRequestBody = true //必须开启,不然core api部分会无法正常工作
 
 	//runtime.GOMAXPROCS(2)
 	beego.Run()
