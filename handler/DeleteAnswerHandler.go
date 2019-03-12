@@ -11,8 +11,8 @@ type DeleteAnswerHandler struct {
 }
 
 func (self *DeleteAnswerHandler) Get() {
-	aid, _ := self.GetInt(":aid")
-	qid, _ := self.GetInt(":qid")
+	aid, _ := self.GetInt64(":aid")
+	qid, _ := self.GetInt64(":qid")
 	uid, _ := self.GetSession("userid").(int64)
 	role, _ := self.GetSession("userrole").(int64)
 

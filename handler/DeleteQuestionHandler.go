@@ -16,7 +16,7 @@ type DeleteQuestionHandler struct {
 func (self *DeleteQuestionHandler) Get() {
 
 	flash := beego.NewFlash()
-	qid, _ := self.GetInt(":qid")
+	qid, _ := self.GetInt64(":qid")
 	uid, _ := self.GetSession("userid").(int64)
 	role, _ := self.GetSession("userrole").(int64)
 	if qid > 0 {

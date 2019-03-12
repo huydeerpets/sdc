@@ -19,7 +19,7 @@ func (self *MainHandler) Get() {
 	self.Data["catpage"] = "home"
 	self.TplNames = "github.com/huydeerpets/sdc/main.html"
 
-	ipage, _ := self.GetInt(":page")
+	ipage, _ := self.GetInt64(":page")
 	page := int(ipage)
 
 	tab := template.HTMLEscapeString(strings.TrimSpace(self.GetString(":tab")))

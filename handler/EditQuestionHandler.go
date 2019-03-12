@@ -20,7 +20,7 @@ func (self *EditQuestionHandler) Get() {
 	self.TplNames = "github.com/huydeerpets/sdc/edit-question.html"
 	flash := beego.NewFlash()
 
-	qid, _ := self.GetInt(":qid")
+	qid, _ := self.GetInt64(":qid")
 
 	if qid_handler, err := model.GetQuestion(qid); err == nil && qid_handler != nil {
 		uid, _ := self.GetSession("userid").(int64)
@@ -57,7 +57,7 @@ func (self *EditQuestionHandler) Post() {
 	flash := beego.NewFlash()
 	tags := template.HTMLEscapeString(strings.TrimSpace(strings.ToLower(self.GetString("tags"))))
 
-	qid, _ := self.GetInt(":qid")
+	qid, _ := self.GetInt64(":qid")
 
 	if qid_handler, err := model.GetQuestion(qid); err == nil {
 		uid, _ := self.GetSession("userid").(int64)
