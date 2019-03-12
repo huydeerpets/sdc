@@ -17,7 +17,7 @@ type MainHandler struct {
 func (self *MainHandler) Get() {
 	//fmt.Println("im MainHandler")
 	self.Data["catpage"] = "home"
-	self.TplName = "github.com/huydeerpets/sdc/main.html"
+	self.TplName = "sdc/main.html"
 
 	ipage, _ := self.GetInt64(":page")
 	page := int(ipage)
