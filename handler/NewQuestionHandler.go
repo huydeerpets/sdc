@@ -17,11 +17,11 @@ type NewQuestionHandler struct {
 }
 
 func (self *NewQuestionHandler) Get() {
-	self.TplNames = "github.com/huydeerpets/sdc/new-question.html"
+	self.TplName = "github.com/huydeerpets/sdc/new-question.html"
 }
 
 func (self *NewQuestionHandler) Post() {
-	self.TplNames = "github.com/huydeerpets/sdc/new-question.html"
+	self.TplName = "github.com/huydeerpets/sdc/new-question.html"
 
 	flash := beego.NewFlash()
 	tags := template.HTMLEscapeString(strings.TrimSpace(strings.ToLower(self.GetString("tags"))))

@@ -17,7 +17,7 @@ type EditAnswerHandler struct {
 }
 
 func (self *EditAnswerHandler) Get() {
-	self.TplNames = "github.com/huydeerpets/sdc/edit-answer.html"
+	self.TplName = "github.com/huydeerpets/sdc/edit-answer.html"
 	flash := beego.NewFlash()
 
 	aid, _ := self.GetInt64(":aid")
@@ -49,7 +49,7 @@ func (self *EditAnswerHandler) Get() {
 }
 
 func (self *EditAnswerHandler) Post() {
-	self.TplNames = "github.com/huydeerpets/sdc/edit-answer.html"
+	self.TplName = "github.com/huydeerpets/sdc/edit-answer.html"
 
 	flash := beego.NewFlash()
 

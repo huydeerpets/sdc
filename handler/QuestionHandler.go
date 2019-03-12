@@ -14,7 +14,7 @@ type QuestionHandler struct {
 }
 
 func (self *QuestionHandler) Get() {
-	self.TplNames = "github.com/huydeerpets/sdc/question.html"
+	self.TplName = "github.com/huydeerpets/sdc/question.html"
 
 	qid, _ := self.GetInt64(":qid")
 

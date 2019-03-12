@@ -23,7 +23,7 @@ func (self *DeleteQuestionHandler) Get() {
 
 		if e := model.DelQuestion(qid, uid, role); e != nil {
 
-			self.TplNames = "error.html"
+			self.TplName = "error.html"
 			flash.Error("删除 Topic id:" + strconv.Itoa(int(qid)) + "出现错误 " + fmt.Sprintf("%s", e) + "!")
 			flash.Store(&self.Controller)
 
