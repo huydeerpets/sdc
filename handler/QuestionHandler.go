@@ -3,9 +3,9 @@ package handler
 import (
 	//"fmt"
 	//"html/template"
-	"sdc/helper"
-	"sdc/lib"
-	"sdc/model"
+	"github.com/huydeerpets/sdc/helper"
+	"github.com/huydeerpets/sdc/lib"
+	"github.com/huydeerpets/sdc/model"
 	//"strconv"
 )
 
@@ -14,7 +14,7 @@ type QuestionHandler struct {
 }
 
 func (self *QuestionHandler) Get() {
-	self.TplNames = "sdc/question.html"
+	self.TplNames = "github.com/huydeerpets/sdc/question.html"
 
 	qid, _ := self.GetInt(":qid")
 

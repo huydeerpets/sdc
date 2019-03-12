@@ -3,9 +3,9 @@ package handler
 import (
 	"fmt"
 	"html/template"
-	"sdc/helper"
-	"sdc/lib"
-	"sdc/model"
+	"github.com/huydeerpets/sdc/helper"
+	"github.com/huydeerpets/sdc/lib"
+	"github.com/huydeerpets/sdc/model"
 	"strconv"
 	"strings"
 )
@@ -17,7 +17,7 @@ type MainHandler struct {
 func (self *MainHandler) Get() {
 	//fmt.Println("im MainHandler")
 	self.Data["catpage"] = "home"
-	self.TplNames = "sdc/main.html"
+	self.TplNames = "github.com/huydeerpets/sdc/main.html"
 
 	ipage, _ := self.GetInt(":page")
 	page := int(ipage)

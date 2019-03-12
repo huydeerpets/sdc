@@ -4,9 +4,9 @@ import (
 	//"fmt"
 	"github.com/astaxie/beego"
 	//"html/template"
-	"sdc/helper"
-	"sdc/lib"
-	"sdc/model"
+	"github.com/huydeerpets/sdc/helper"
+	"github.com/huydeerpets/sdc/lib"
+	"github.com/huydeerpets/sdc/model"
 	//"strconv"
 )
 
@@ -32,7 +32,7 @@ func (self *SigninHandler) Get() {
 				self.Data["remember"] = nil
 			}
 		}
-		self.TplNames = "sdc/signin.html"
+		self.TplNames = "github.com/huydeerpets/sdc/signin.html"
 
 	} else { //如果已登录
 		self.Redirect("/", 302)
@@ -84,7 +84,7 @@ func (self *SigninHandler) Get() {
 }
 
 func (self *SigninHandler) Post() {
-	self.TplNames = "sdc/signin.html"
+	self.TplNames = "github.com/huydeerpets/sdc/signin.html"
 
 	flash := beego.NewFlash()
 	email := self.GetString("email")

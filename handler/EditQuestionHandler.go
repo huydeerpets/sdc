@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"github.com/astaxie/beego"
 	"html/template"
-	"sdc/helper"
-	"sdc/lib"
-	"sdc/model"
+	"github.com/huydeerpets/sdc/helper"
+	"github.com/huydeerpets/sdc/lib"
+	"github.com/huydeerpets/sdc/model"
 	"strconv"
 	"strings"
 	"time"
@@ -17,7 +17,7 @@ type EditQuestionHandler struct {
 }
 
 func (self *EditQuestionHandler) Get() {
-	self.TplNames = "sdc/edit-question.html"
+	self.TplNames = "github.com/huydeerpets/sdc/edit-question.html"
 	flash := beego.NewFlash()
 
 	qid, _ := self.GetInt(":qid")
@@ -52,7 +52,7 @@ func (self *EditQuestionHandler) Get() {
 }
 
 func (self *EditQuestionHandler) Post() {
-	self.TplNames = "sdc/edit-question.html"
+	self.TplNames = "github.com/huydeerpets/sdc/edit-question.html"
 
 	flash := beego.NewFlash()
 	tags := template.HTMLEscapeString(strings.TrimSpace(strings.ToLower(self.GetString("tags"))))

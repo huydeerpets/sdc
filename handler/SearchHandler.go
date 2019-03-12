@@ -3,9 +3,9 @@ package handler
 import (
 	"fmt"
 	"html/template"
-	"sdc/helper"
-	"sdc/lib"
-	"sdc/model"
+	"github.com/huydeerpets/sdc/helper"
+	"github.com/huydeerpets/sdc/lib"
+	"github.com/huydeerpets/sdc/model"
 	"strconv"
 	"strings"
 )
@@ -15,7 +15,7 @@ type SearchHandler struct {
 }
 
 func (self *SearchHandler) Get() {
-	self.TplNames = "sdc/search.html"
+	self.TplNames = "github.com/huydeerpets/sdc/search.html"
 	keyword := template.HTMLEscapeString(strings.TrimSpace(self.GetString(":keyword")))
 
 	if keyword == "" {

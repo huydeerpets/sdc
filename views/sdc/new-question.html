@@ -1,4 +1,4 @@
-{{template "sdc/head.html".}}
+{{template "github.com/huydeerpets/sdc/head.html".}}
 <body id="body">
 
 <!--[if lt IE 9]>
@@ -9,15 +9,15 @@
 </div>
 <![endif]-->
 
-{{template "sdc/navbar.html".}}
-{{template "sdc/header.html".}}
+{{template "github.com/huydeerpets/sdc/navbar.html".}}
+{{template "github.com/huydeerpets/sdc/header.html".}}
 <div class="container wrap">
 
     <div class="row inner edge">
         <div class="col-xs-12">
             <h2 class="common-title">提出新问题</h2>
         </div>
-        {{template "sdc/msgerr.html" .}}
+        {{template "github.com/huydeerpets/sdc/msgerr.html" .}}
         <form id="ask" action="/new/question/" method="post">
             <div id="edit-main" class="col-xs-12 col-md-8">
                 <div id="content" class="edit-post">
@@ -176,7 +176,7 @@
                         <textarea id="editor" class="form-control mono mousetrap textarea-14" name="content" tabindex="2" autocomplete="off" spellcheck="false" rows="15" style="display:none;"></textarea>
 
                         <div id="epiceditor" class="form-control mono mousetrap textarea-14" style="height:500px;"></div>
-                        {{template "sdc/editor-epiceditor-question.html".}}
+                        {{template "github.com/huydeerpets/sdc/editor-epiceditor-question.html".}}
                     </div>
                     {{/*
                     <div id="wmd-preview" class="fmt preview"></div>
@@ -259,7 +259,7 @@
 
 </div>
 <!-- end .wrap -->
-{{template "sdc/footer.html".}}
+{{template "github.com/huydeerpets/sdc/footer.html".}}
 
 </body>
 </html>

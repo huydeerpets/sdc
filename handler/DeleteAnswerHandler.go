@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"sdc/lib"
-	"sdc/model"
+	"github.com/huydeerpets/sdc/lib"
+	"github.com/huydeerpets/sdc/model"
 	"strconv"
 )
 

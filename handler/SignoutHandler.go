@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"sdc/lib"
+	"github.com/huydeerpets/sdc/lib"
 	"strconv"
 	"time"
 )

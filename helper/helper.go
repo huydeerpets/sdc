@@ -36,7 +36,7 @@ import (
 	"os/exec"
 	fpath "path"
 	"regexp"
-	"sdc/plugin/blackfriday"
+	"github.com/huydeerpets/sdc/plugin/blackfriday"
 	"strconv"
 	"strings"
 	"time"

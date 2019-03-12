@@ -2,8 +2,8 @@ package handler
 
 import (
 	"fmt"
-	"sdc/lib"
-	"sdc/model"
+	"github.com/huydeerpets/sdc/lib"
+	"github.com/huydeerpets/sdc/model"
 	"strconv"
 )
 

@@ -4,9 +4,9 @@ import (
 	//"fmt"
 	"github.com/astaxie/beego"
 	//"html/template"
-	"sdc/helper"
-	"sdc/lib"
-	"sdc/model"
+	"github.com/huydeerpets/sdc/helper"
+	"github.com/huydeerpets/sdc/lib"
+	"github.com/huydeerpets/sdc/model"
 	//"strconv"
 	"strings"
 )
@@ -16,7 +16,7 @@ type SignupHandler struct {
 }
 
 func (self *SignupHandler) Get() {
-	self.TplNames = "sdc/signup.html"
+	self.TplNames = "github.com/huydeerpets/sdc/signup.html"
 
 	//signbar的值为 0则关闭提示栏  1则显示提示栏
 	self.Ctx.SetCookie("signbar", "0", 31536000, "/")
@@ -68,7 +68,7 @@ func (self *SignupHandler) Get() {
 
 func (self *SignupHandler) Post() {
 
-	self.TplNames = "sdc/signup.html"
+	self.TplNames = "github.com/huydeerpets/sdc/signup.html"
 
 	flash := beego.NewFlash()
 	email := strings.TrimSpace(strings.ToLower(self.GetString("email")))

@@ -5,8 +5,8 @@ import (
 	"github.com/astaxie/beego"
 	"html/template"
 	"runtime"
-	"sdc/helper"
-	//"sdc/model"
+	"github.com/huydeerpets/sdc/helper"
+	//"github.com/huydeerpets/sdc/model"
 )
 
 var (
