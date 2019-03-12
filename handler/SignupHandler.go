@@ -16,7 +16,7 @@ type SignupHandler struct {
 }
 
 func (self *SignupHandler) Get() {
-	self.TplName = "github.com/huydeerpets/sdc/signup.html"
+	self.TplName = "sdc/signup.html"
 
 	//signbar的值为 0则关闭提示栏  1则显示提示栏
 	self.Ctx.SetCookie("signbar", "0", 31536000, "/")
@@ -68,7 +68,7 @@ func (self *SignupHandler) Get() {
 
 func (self *SignupHandler) Post() {
 
-	self.TplName = "github.com/huydeerpets/sdc/signup.html"
+	self.TplName = "sdc/signup.html"
 
 	flash := beego.NewFlash()
 	email := strings.TrimSpace(strings.ToLower(self.GetString("email")))

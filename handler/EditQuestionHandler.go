@@ -17,7 +17,7 @@ type EditQuestionHandler struct {
 }
 
 func (self *EditQuestionHandler) Get() {
-	self.TplName = "github.com/huydeerpets/sdc/edit-question.html"
+	self.TplName = "sdc/edit-question.html"
 	flash := beego.NewFlash()
 
 	qid, _ := self.GetInt64(":qid")
@@ -52,7 +52,7 @@ func (self *EditQuestionHandler) Get() {
 }
 
 func (self *EditQuestionHandler) Post() {
-	self.TplName = "github.com/huydeerpets/sdc/edit-question.html"
+	self.TplName = "sdc/edit-question.html"
 
 	flash := beego.NewFlash()
 	tags := template.HTMLEscapeString(strings.TrimSpace(strings.ToLower(self.GetString("tags"))))

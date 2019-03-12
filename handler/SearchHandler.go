@@ -15,7 +15,7 @@ type SearchHandler struct {
 }
 
 func (self *SearchHandler) Get() {
-	self.TplName = "github.com/huydeerpets/sdc/search.html"
+	self.TplName = "sdc/search.html"
 	keyword := template.HTMLEscapeString(strings.TrimSpace(self.GetString(":keyword")))
 
 	if keyword == "" {

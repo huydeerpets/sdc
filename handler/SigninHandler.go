@@ -32,7 +32,7 @@ func (self *SigninHandler) Get() {
 				self.Data["remember"] = nil
 			}
 		}
-		self.TplName = "github.com/huydeerpets/sdc/signin.html"
+		self.TplName = "sdc/signin.html"
 
 	} else { //如果已登录
 		self.Redirect("/", 302)
@@ -84,7 +84,7 @@ func (self *SigninHandler) Get() {
 }
 
 func (self *SigninHandler) Post() {
-	self.TplName = "github.com/huydeerpets/sdc/signin.html"
+	self.TplName = "sdc/signin.html"
 
 	flash := beego.NewFlash()
 	email := self.GetString("email")
