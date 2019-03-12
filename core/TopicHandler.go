@@ -34,7 +34,7 @@ func (self *TopicHandler) Post() {
 				self.Data["json"] = `{"TopicId:"` + strconv.Itoa(int(tid)) + `}`
 			}
 
-			self.ServeJson()
+			self.ServeJSON()
 		} else {
 
 			fmt.Println("401 Unauthorized!")
@@ -60,7 +60,7 @@ func (self *TopicHandler) Get() {
 		tps, _ := model.GetTopics(0, 0, "id")
 		self.Data["json"] = *tps
 	}
-	self.ServeJson()
+	self.ServeJSON()
 }
 
 //更新帖子
@@ -79,7 +79,7 @@ func (self *TopicHandler) Put() {
 			} else {
 				self.Data["json"] = "Update success!"
 			}
-			self.ServeJson()
+			self.ServeJSON()
 		} else {
 
 			fmt.Println("401 Unauthorized!")
@@ -109,7 +109,7 @@ func (self *TopicHandler) Delete() {
 
 					self.Data["json"] = "Delete success!"
 				}
-				//self.ServeJson()
+				//self.ServeJSON()
 				self.Ctx.WriteString(self.Data["json"].(string))
 
 			} else {
